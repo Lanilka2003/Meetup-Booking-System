@@ -1,0 +1,13 @@
+{
+  "app": "npx tsx bin/app.ts",
+  "watch": { "include": ["bin", "lib", "src"] },
+   "context": {
+    "stage": "dev",
+    "databaseMode": "free",
+    "existingTables": true,
+    "timezone": "Asia/Colombo",
+    "reminderHourLocal": 8,
+    "corsOrigins": []
+  }
+
+}

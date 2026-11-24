@@ -1,0 +1,40 @@
+{
+  "name": "meetup-booking-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Serverless backend for the Meetup Booking app: HTTP API + Lambda + DynamoDB + SQS + WhatsApp Cloud API.",
+  "scripts": {
+    "build": "tsc --noEmit",
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx --test test/*.test.ts",
+    "synth": "cdk synth",
+    "deploy": "cdk deploy --outputs-file cdk-outputs.json",
+    "destroy": "cdk destroy",
+    "seed": "tsx scripts/seed.ts",
+    "create-user": "tsx scripts/create-user.ts",
+    "frontend-env": "tsx scripts/frontend-env.ts",
+    "check": "bash scripts/health-check.sh"
+  },
+  "dependencies": {
+    "@aws-sdk/client-cloudformation": "^3.1153.0",
+    "@aws-sdk/client-cognito-identity-provider": "^3.1153.0",
+    "@aws-sdk/client-dynamodb": "^3.1153.0",
+    "@aws-sdk/client-secrets-manager": "^3.1153.0",
+    "@aws-sdk/client-sqs": "^3.1153.0",
+    "@aws-sdk/lib-dynamodb": "^3.1153.0",
+    "aws-cdk-lib": "^2.273.0",
+    "constructs": "^10.8.1"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.164",
+    "@types/node": "^26.6.5",
+    "aws-cdk": "^2.1145.0",
+    "aws-sdk-client-mock": "^4.1.0",
+    "esbuild": "^0.28.2",
+    "tsx": "^4.23.15",
+    "typescript": "~6.0.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
